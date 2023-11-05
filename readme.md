@@ -75,7 +75,7 @@ Example:
 
 **[Source](modules/sed.py)**
 
-Use sed tool on messages.
+Uses sed tool on messages.
 When you reply to a message from others, this just outputs a result of processing.
 When you reply to your message, your message gets edited instead.
 
