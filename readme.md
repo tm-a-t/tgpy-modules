@@ -37,7 +37,7 @@ Some modules have pip dependencies. You can install them the way you prefer:
     - [Pin message](#pin-message)
     - [Animate message](#animate-message)
 
-<br>
+***
 
 ## 🌐 Side tools
 
@@ -69,7 +69,7 @@ Example:
 .genius believer
 ```
 
-<br>
+***
 
 ### sed by [@purplesyringa](https://t.me/purplesyringa)
 
@@ -95,7 +95,7 @@ Example: (in reply to a message)
 s/yes/no/g
 ```
 
-<br>
+***
 
 ## 🛠 TGPy utils
 
@@ -119,7 +119,7 @@ modules.add('dunder-fix', urlopen(url).read())
 restart()
 ```
 
-<br>
+***
 
 ### aiohttp
 
@@ -150,7 +150,7 @@ async with http.get('https://python.org') as response:
     print("Body:", html[:15], "...")
 ```
 
-<br>
+***
 
 ### Uptime by [@irdkwmnsb](https://t.me/irdkwmnsb)
 
@@ -176,7 +176,7 @@ uptime()
 TGPy> 2 days, 0:15:15.700456
 ```
 
-<br>
+***
 
 ### Bot controller
 
@@ -230,7 +230,7 @@ async def on_new_message(event):
     await event.reply(text)
 ```
 
-<br>
+***
 
 ### pipdep by [@purplesyringa](https://t.me/purplesyringa)
 
@@ -248,7 +248,7 @@ modules.add('pipdep', urlopen(url).read())
 restart()
 ```
 
-<br>
+***
 
 ## 👾 Fun stuff
 
@@ -273,7 +273,7 @@ name('👺')
 TGPy> JAPANESE GOBLIN
 ```
 
-<br>
+***
 
 ### Pin message
 
@@ -296,7 +296,7 @@ modules.add('tgpy-pin', urlopen(url).read())
 restart()
 ```
 
-<br>
+***
 
 ### Animate message
 
@@ -320,7 +320,7 @@ Example:
 anim('Magic typing effect ✨')
 ```
 
-<br>
+***
 
 ### Shout
 
