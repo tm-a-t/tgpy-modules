@@ -1,32 +1,47 @@
-# TGPy Modules I Use
+# TGPy modules I use
 
-These are some TGPy modules from my collection, made by me or someone else.
-All modules without a specified author are mine.
-
+These are some TGPy modules from my collection, made by my friends or myself.
 Feel free to read sources and adjust some code parts to your needs.
 
 ### Installation
 
-I include installation code for all modules.
-Just run it with TGPy (that is, just send the code anywhere in Telegram.)
-The code just takes the module source from this repo and adds it to
+I include installation code for each module.
+Just run it with TGPy — that is, send the code anywhere in Telegram.
+The code downloads the>  source from this repo and adds it to
 your modules.
 
 ### Dependencies
 
-Some modules have pip dependencies. You can install them in any way you like:
+Some modules have pip dependencies. You can install them the way you prefer:
 
 - Just run `pip install` on the machine where TGPy is running.
-- Set up any way to run shell commands from Python
+- Set up a way to run shell commands from Python
   (like [the example](https://tgpy.tmat.me/extensibility/transformers/?h=shell#code-transformers) from the docs) and run
   something like `shell('pip install ...')`.
-- Use `pipdep` module to automatically install pip packages you import.
+- Use [pipdep](#pipdep-by-purplesyringa) module to automatically install imported pip packages.
+
+### Contents
+
+- Side tools
+    - [Genius](#genius-by-purplesyringa)
+    - [sed](#sed-by-purplesyringa)
+- TGPy utils
+    - [Dunder fix](#dunder-fix-by-vanutp)
+    - [aiohttp](#aiohttp)
+    - [Uptime](#uptime-by-irdkwmnsb)
+    - [Bot controller](#bot-controller)
+    - [pipdep](#pipdep-by-purplesyringa)
+- Fun
+    - [Shout](#shout)
+    - [Name character](#name-character)
+    - [Pin message](#pin-message)
+    - [Animate message](#animate-message)
 
 ## 🌐 Side tools
 
 ### Genius by [@purplesyringa](https://t.me/purplesyringa)
 
-[Source](modules/genius.py)
+> [Source](modules/genius.py)
 
 Searches song lyrics on genius.com.
 
@@ -54,7 +69,7 @@ Example:
 
 ### sed by [@purplesyringa](https://t.me/purplesyringa)
 
-[Source](modules/sed.py)
+> [Source](modules/sed.py)
 
 Use sed tool on messages.
 When you reply to a message from others, this just outputs a result of processing.
@@ -76,100 +91,11 @@ Example: (in reply to a message)
 s/yes/no/g
 ```
 
-## 👾 Fun
-
-### Shout
-
-[Source](modules/shout.py)
-
-When used in reply to a message, shows its text "shouted".
-
-```python
-from urllib.request import urlopen
-
-url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/shout.py'
-modules.add('shout', urlopen(url).read())
-restart()
-```
-
-Example:
-
-```python
-# in reply to "python"
-shout()
-
-TGPy> PYTHOOOOOON
-```
-
-### Name character
-
-[Source](modules/name.py)
-
-Just a function I often use to find out the unicode name of a letter, symbol, or emoji.
-
-Code:
-
-```python
-modules.add('name', 'from unicodedata import name')
-restart()
-```
-
-Example of usage:
-
-```
-name('👺')
-
-TGPy> JAPANESE GOBLIN
-```
-
-### Pin message
-
-[Source](modules/tgpy-pin.py)
-
-This module is used in [TGPy Flood chat](https://t.me/tgpy_flood) to allow all members to pin messages
-(not only admins.)
-
-When someone sends `/pin` to the chat, the person with this module
-automatically pins their message.
-
-If there are multiple people who has this module installed, only one gets to pin the message. So it becomes a random
-race :)
-
-```python
-from urllib.request import urlopen
-
-url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/tgpy-pin.py'
-modules.add('tgpy-pin', urlopen(url).read())
-restart()
-```
-
-### Animate message
-
-[Source](modules/anim.py)
-
-Send a message and edit it many times to create a typing animation.
-
-Install:
-
-```python
-from urllib.request import urlopen
-
-url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/anim.py'
-modules.add('anim', urlopen(url).read())
-restart()
-```
-
-Example:
-
-```python
-anim('Magic typing effect ✨')
-```
-
 ## 🛠 TGPy utils
 
 ### Dunder fix by [@vanutp](t.me/vanutp)
 
-[Source](modules/dunder-fix.py)
+> [Source](modules/dunder-fix.py)
 
 Telegram app for Android has a flaw in formatting:
 there is no way to prevent text surrounded by double underscores turning
@@ -189,7 +115,7 @@ restart()
 
 ### aiohttp
 
-[Source](modules/http.py)
+> [Source](modules/http.py)
 
 One line. Starts `http`, a client session object that can be used to make requests.
 
@@ -218,7 +144,7 @@ async with http.get('https://python.org') as response:
 
 ### Uptime by [@irdkwmnsb](https://t.me/irdkwmnsb)
 
-[Source](modules/uptime.py)
+> [Source](modules/uptime.py)
 
 A simple function that shows how long TGPy has been active.
 
@@ -242,7 +168,7 @@ TGPy> 2 days, 0:15:15.700456
 
 ### Bot controller
 
-[Source](modules/bot-controller.py)
+> [Source](modules/bot-controller.py)
 
 Use Telethon to control a bot like your account.
 
@@ -294,7 +220,7 @@ async def on_new_message(event):
 
 ### pipdep by [@purplesyringa](https://t.me/purplesyringa)
 
-[Source](modules/genius.py)
+> [Source](modules/genius.py)
 
 Automatically installs all pip packages imported in your saved modules.
 
@@ -306,4 +232,93 @@ from urllib.request import urlopen
 url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/pipdep.py'
 modules.add('pipdep', urlopen(url).read())
 restart()
+```
+
+## 👾 Fun stuff
+
+### Name character
+
+> [Source](modules/name.py)
+
+Just a function I often use to find out the unicode name of a letter, symbol, or emoji.
+
+Install:
+
+```python
+modules.add('name', 'from unicodedata import name')
+restart()
+```
+
+Example of usage:
+
+```
+name('👺')
+
+TGPy> JAPANESE GOBLIN
+```
+
+### Pin message
+
+> [Source](modules/tgpy-pin.py)
+
+This module is used in [TGPy Flood chat](https://t.me/tgpy_flood) to allow all members to pin messages
+(not only admins.)
+
+When someone sends `/pin` to the chat, the person with this module
+automatically pins their message.
+
+If there are multiple people who has this module installed, only one gets to pin the message. So it becomes a random
+race :)
+
+```python
+from urllib.request import urlopen
+
+url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/tgpy-pin.py'
+modules.add('tgpy-pin', urlopen(url).read())
+restart()
+```
+
+### Animate message
+
+> [Source](modules/anim.py)
+
+Send a message and edit it many times to create a typing animation.
+
+Install:
+
+```python
+from urllib.request import urlopen
+
+url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/anim.py'
+modules.add('anim', urlopen(url).read())
+restart()
+```
+
+Example:
+
+```python
+anim('Magic typing effect ✨')
+```
+
+### Shout
+
+> [Source](modules/shout.py)
+
+When used in reply to a message, shows its text "shouted".
+
+```python
+from urllib.request import urlopen
+
+url = 'https://raw.githubusercontent.com/tm-a-t/tgpy-modules/main/modules/shout.py'
+modules.add('shout', urlopen(url).read())
+restart()
+```
+
+Example:
+
+```python
+# in reply to "python"
+shout()
+
+TGPy > PYTHOOOOOON
 ```
