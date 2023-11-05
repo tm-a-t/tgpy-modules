@@ -37,11 +37,13 @@ Some modules have pip dependencies. You can install them the way you prefer:
     - [Pin message](#pin-message)
     - [Animate message](#animate-message)
 
+<br>
+
 ## 🌐 Side tools
 
 ### Genius by [@purplesyringa](https://t.me/purplesyringa)
 
-> [Source](modules/genius.py)
+**[Source](modules/genius.py)**
 
 Searches song lyrics on genius.com.
 
@@ -67,9 +69,11 @@ Example:
 .genius believer
 ```
 
+<br>
+
 ### sed by [@purplesyringa](https://t.me/purplesyringa)
 
-> [Source](modules/sed.py)
+**[Source](modules/sed.py)**
 
 Use sed tool on messages.
 When you reply to a message from others, this just outputs a result of processing.
@@ -91,11 +95,13 @@ Example: (in reply to a message)
 s/yes/no/g
 ```
 
+<br>
+
 ## 🛠 TGPy utils
 
 ### Dunder fix by [@vanutp](t.me/vanutp)
 
-> [Source](modules/dunder-fix.py)
+**[Source](modules/dunder-fix.py)**
 
 Telegram app for Android has a flaw in formatting:
 there is no way to prevent text surrounded by double underscores turning
@@ -113,9 +119,11 @@ modules.add('dunder-fix', urlopen(url).read())
 restart()
 ```
 
+<br>
+
 ### aiohttp
 
-> [Source](modules/http.py)
+**[Source](modules/http.py)**
 
 One line. Starts `http`, a client session object that can be used to make requests.
 
@@ -142,9 +150,11 @@ async with http.get('https://python.org') as response:
     print("Body:", html[:15], "...")
 ```
 
+<br>
+
 ### Uptime by [@irdkwmnsb](https://t.me/irdkwmnsb)
 
-> [Source](modules/uptime.py)
+**[Source](modules/uptime.py)**
 
 A simple function that shows how long TGPy has been active.
 
@@ -166,9 +176,11 @@ uptime()
 TGPy> 2 days, 0:15:15.700456
 ```
 
+<br>
+
 ### Bot controller
 
-> [Source](modules/bot-controller.py)
+**[Source](modules/bot-controller.py)**
 
 Use Telethon to control a bot like your account.
 
@@ -218,9 +230,11 @@ async def on_new_message(event):
     await event.reply(text)
 ```
 
+<br>
+
 ### pipdep by [@purplesyringa](https://t.me/purplesyringa)
 
-> [Source](modules/genius.py)
+**[Source](modules/genius.py)**
 
 Automatically installs all pip packages imported in your saved modules.
 
@@ -234,11 +248,13 @@ modules.add('pipdep', urlopen(url).read())
 restart()
 ```
 
+<br>
+
 ## 👾 Fun stuff
 
 ### Name character
 
-> [Source](modules/name.py)
+**[Source](modules/name.py)**
 
 Just a function I often use to find out the unicode name of a letter, symbol, or emoji.
 
@@ -257,9 +273,11 @@ name('👺')
 TGPy> JAPANESE GOBLIN
 ```
 
+<br>
+
 ### Pin message
 
-> [Source](modules/tgpy-pin.py)
+**[Source](modules/tgpy-pin.py)**
 
 This module is used in [TGPy Flood chat](https://t.me/tgpy_flood) to allow all members to pin messages
 (not only admins.)
@@ -278,9 +296,11 @@ modules.add('tgpy-pin', urlopen(url).read())
 restart()
 ```
 
+<br>
+
 ### Animate message
 
-> [Source](modules/anim.py)
+**[Source](modules/anim.py)**
 
 Send a message and edit it many times to create a typing animation.
 
@@ -300,9 +320,11 @@ Example:
 anim('Magic typing effect ✨')
 ```
 
+<br>
+
 ### Shout
 
-> [Source](modules/shout.py)
+**[Source](modules/shout.py)**
 
 When used in reply to a message, shows its text "shouted".
 
@@ -320,5 +342,5 @@ Example:
 # in reply to "python"
 shout()
 
-TGPy > PYTHOOOOOON
+TGPy> PYTHOOOOOON
 ```
