@@ -1,6 +1,8 @@
 import asyncio
 import subprocess
 
+import tgpy.api
+
 
 async def sed(s):
     orig = await ctx.msg.get_reply_message()
@@ -22,4 +24,4 @@ def sed_trans(text):
     return text
 
 
-tgpy.add_code_transformer("sed", sed_trans)
+tgpy.api.code_transformers.add("sed", sed_trans)
