@@ -1,6 +1,6 @@
 # TGPy modules I use
 
-These are some TGPy modules from my collection, made by my friends or myself.
+These are some [TGPy](https://github.com/tm-a-t/TGPy) modules from my collection, made by my friends or myself.
 Feel free to read sources and adjust some code parts to your needs.
 
 ### Installation
